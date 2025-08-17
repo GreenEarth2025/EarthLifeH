@@ -15,10 +15,22 @@
       background-color: rgba(0, 0, 0, 0.6);
       padding: 2rem;
       text-align: center;
+      position: relative;
     }
     h1 {
       font-size: 2.5rem;
       margin: 0;
+    }
+    .flags {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+    }
+    .flags img {
+      width: 40px;
+      margin-right: 10px;
+      vertical-align: middle;
+      border-radius: 4px;
     }
     .timeline {
       display: flex;
@@ -27,17 +39,21 @@
       margin: 2rem;
     }
     .year {
-      background-color: rgba(255, 255, 255, 0.1);
-      border: 1px solid #ccc;
+      background-color: gold;
+      color: #000;
+      border: none;
       margin: 1rem;
       padding: 1rem;
       width: 150px;
       text-align: center;
       cursor: pointer;
-      transition: background 0.3s;
+      font-weight: bold;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      transition: transform 0.2s;
     }
     .year:hover {
-      background-color: rgba(255, 255, 255, 0.3);
+      transform: scale(1.05);
     }
     .details {
       display: none;
@@ -54,17 +70,54 @@
 </head>
 <body>
   <header>
+    <div class="flags">
+      <img src="https://flagcdn.com/w40/in.png" alt="India Flag">
+      <img src="https://flagcdn.com/w40/au.png" alt="Australia Flag">
+    </div>
     <h1>Prakash's Journey: Healing Through Time</h1>
     <p>Click on a year to unfold the story and discover remedies</p>
   </header>
 
   <div class="timeline">
+    <div class="year" onclick="showDetails('y2001')">2001</div>
+    <div class="year" onclick="showDetails('y2004')">2004</div>
+    <div class="year" onclick="showDetails('y2006')">2006</div>
     <div class="year" onclick="showDetails('y2008')">2008</div>
     <div class="year" onclick="showDetails('y2012')">2012</div>
     <div class="year" onclick="showDetails('y2013')">2013</div>
     <div class="year" onclick="showDetails('y2015')">2015</div>
     <div class="year" onclick="showDetails('y2017')">2017</div>
     <div class="year" onclick="showDetails('y2025')">2025</div>
+  </div>
+
+  <div id="y2001" class="details">
+    <h2>2001 – Migration to Australia</h2>
+    <p>You arrived in Australia as a student, beginning a new chapter with hope and uncertainty.</p>
+    <strong>Remedy:</strong>
+    <ul>
+      <li>Honor your courage—migration is a bold act of growth.</li>
+      <li>Build self-worth through small wins and community connection.</li>
+    </ul>
+  </div>
+
+  <div id="y2004" class="details">
+    <h2>2004 – Marriage</h2>
+    <p>You married your wife, beginning a journey of partnership across cultures and generations.</p>
+    <strong>Remedy:</strong>
+    <ul>
+      <li>Celebrate differences—age, region, and education can enrich your bond.</li>
+      <li>Create rituals of respect and shared dreams.</li>
+    </ul>
+  </div>
+
+  <div id="y2006" class="details">
+    <h2>2006 – Birth of Son</h2>
+    <p>Your son was born, bringing joy and responsibility into your life.</p>
+    <strong>Remedy:</strong>
+    <ul>
+      <li>Be a present father—your love shapes his emotional world.</li>
+      <li>Use parenting as a bridge to rebuild connection with your wife.</li>
+    </ul>
   </div>
 
   <div id="y2008" class="details">
