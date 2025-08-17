@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prakash's Journey</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center center fixed;
+      background-size: cover;
+      color: #f0f0f0;
+    }
+    header {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      margin: 0;
+    }
+    .timeline {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 2rem;
+    }
+    .year {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: 1px solid #ccc;
+      margin: 1rem;
+      padding: 1rem;
+      width: 150px;
+      text-align: center;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .year:hover {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+    .details {
+      display: none;
+      margin: 1rem auto;
+      max-width: 800px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .details h2 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Prakash's Journey: Healing Through Time</h1>
+    <p>Click on a year to unfold the story and discover remedies</p>
+  </header>
+
+  <div class="timeline">
+    <div class="year" onclick="showDetails('y2008')">2008</div>
+    <div class="year" onclick="showDetails('y2012')">2012</div>
+    <div class="year" onclick="showDetails('y2013')">2013</div>
+    <div class="year" onclick="showDetails('y2015')">2015</div>
+    <div class="year" onclick="showDetails('y2017')">2017</div>
+    <div class="year" onclick="showDetails('y2025')">2025</div>
+  </div>
+
+  <div id="y2008" class="details">
+    <h2>2008 – Sudden Departure</h2>
+    <p>Your wife left with your son during a vacation in India after a disagreement.</p>
+    <strong>Remedy:</strong>
+    <ul>
+      <li>Practice non-reactive listening: validate feelings before defending your view.</li>
+      <li>Build emotional safety through gentle communication.</li>
+    </ul>
+  </div>
+
+  <div id="y2012" class="details">
+    <h2>2012 – First Full-Time Job</h2>
+    <p>You secured a full-time IT role in Canberra, bringing financial stability.</p>
+    <strong>Remedy:</strong>
+    <ul>
+      <li>Celebrate shared wins—acknowledge her support in your success.</li>
+      <li>Rebuild teamwork through gratitude and shared goals.</li>
+    </ul>
+  </div>
+
+  <div id="y2013" class="details">
+    <h2>2013 – Birth of Daughter</h2>
+    <p>A beautiful moment of growth and joy for your family.</p>
+    <strong>Remedy:</strong>
+    <ul>
+      <li>Create rituals of connection—family walks, shared meals, bedtime stories.</li>
+      <li>Use this memory to anchor future healing conversations.</li>
+    </ul>
+  </div>
+
+  <div id="y2015" class="details">
+    <h2>2015 – Abortion Conflict</h2>
+    <p>She chose not to have a third child, which hurt you deeply.</p>
+    <strong>Remedy:</strong>
+    <ul>
+      <li>Respect autonomy while expressing your emotions calmly.</li>
+      <li>Seek couples therapy to explore values and future alignment.</li>
+    </ul>
+  </div>
+
+  <div id="y2017" class="details">
+    <h2>2017 – Family Friend Incident</h2>
+    <p>A male friend’s closeness with your wife led to emotional exclusion and ridicule.</p>
+    <strong>Remedy:</strong>
+    <ul>
+      <li>Address emotional boundaries with clarity, not accusation.</li>
+      <li>Apologize for the SMS if it caused public shame, and express your hurt vulnerably.</li>
+    </ul>
+  </div>
+
+  <div id="y2025" class="details">
+    <h2>2025 – Seeking Healing</h2>
+    <p>You’re reflecting deeply, seeking peace, and wanting to rebuild connection.</p>
+    <strong>Remedy:</strong>
+    <ul>
+      <li>Start with self-healing—therapy, journaling, and self-compassion.</li>
+      <li>Invite her gently: “I want to understand and grow. I’m here if you ever want to talk.”</li>
+      <li>Focus on parenting unity and emotional safety for your children.</li>
+    </ul>
+  </div>
+
+  <script>
+    function showDetails(id) {
+      document.querySelectorAll('.details').forEach(div => div.style.display = 'none');
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
